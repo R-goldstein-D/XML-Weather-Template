@@ -48,7 +48,7 @@
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
             this.forecastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
-            this.forecastLabel.Location = new System.Drawing.Point(213, 21);
+            this.forecastLabel.Location = new System.Drawing.Point(402, 21);
             this.forecastLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.forecastLabel.Name = "forecastLabel";
             this.forecastLabel.Size = new System.Drawing.Size(124, 43);
@@ -60,7 +60,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 21);
+            this.label3.Location = new System.Drawing.Point(197, 21);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 43);
@@ -74,7 +74,7 @@
             this.min1.Location = new System.Drawing.Point(234, 255);
             this.min1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.min1.Name = "min1";
-            this.min1.Size = new System.Drawing.Size(33, 20);
+            this.min1.Size = new System.Drawing.Size(66, 20);
             this.min1.TabIndex = 48;
             // 
             // minLabel
@@ -94,7 +94,7 @@
             this.max1.Location = new System.Drawing.Point(234, 210);
             this.max1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.max1.Name = "max1";
-            this.max1.Size = new System.Drawing.Size(33, 20);
+            this.max1.Size = new System.Drawing.Size(66, 20);
             this.max1.TabIndex = 45;
             // 
             // maxLabel
@@ -112,7 +112,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(194, 38);
+            this.label5.Location = new System.Drawing.Point(354, 34);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(172, 41);
@@ -148,7 +148,7 @@
             this.min2.Location = new System.Drawing.Point(234, 384);
             this.min2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.min2.Name = "min2";
-            this.min2.Size = new System.Drawing.Size(33, 20);
+            this.min2.Size = new System.Drawing.Size(66, 20);
             this.min2.TabIndex = 68;
             // 
             // label4
@@ -168,7 +168,7 @@
             this.max2.Location = new System.Drawing.Point(234, 339);
             this.max2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.max2.Name = "max2";
-            this.max2.Size = new System.Drawing.Size(33, 20);
+            this.max2.Size = new System.Drawing.Size(66, 20);
             this.max2.TabIndex = 66;
             // 
             // label7
@@ -202,7 +202,7 @@
             this.Controls.Add(this.label5);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ForecastScreen";
-            this.Size = new System.Drawing.Size(375, 615);
+            this.Size = new System.Drawing.Size(563, 700);
             this.ResumeLayout(false);
             this.PerformLayout();
 
