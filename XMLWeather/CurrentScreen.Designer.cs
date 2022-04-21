@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cityOutput = new System.Windows.Forms.Label();
             this.currentOutput = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,6 +54,10 @@
             this.feelsLikeTempLabel = new System.Windows.Forms.Label();
             this.feelsLikeTempOutput = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lastUpdatedLabel = new System.Windows.Forms.Label();
+            this.lastUpdatedOutput = new System.Windows.Forms.Label();
+            this.conditionOutput = new System.Windows.Forms.Label();
+            this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // cityOutput
@@ -218,7 +223,7 @@
             // 
             this.sunriseLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunriseLabel.ForeColor = System.Drawing.Color.White;
-            this.sunriseLabel.Location = new System.Drawing.Point(53, 326);
+            this.sunriseLabel.Location = new System.Drawing.Point(36, 381);
             this.sunriseLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sunriseLabel.Name = "sunriseLabel";
             this.sunriseLabel.Size = new System.Drawing.Size(78, 21);
@@ -230,7 +235,7 @@
             // 
             this.sunriseOutput.BackColor = System.Drawing.Color.Transparent;
             this.sunriseOutput.ForeColor = System.Drawing.Color.White;
-            this.sunriseOutput.Location = new System.Drawing.Point(26, 347);
+            this.sunriseOutput.Location = new System.Drawing.Point(102, 408);
             this.sunriseOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sunriseOutput.Name = "sunriseOutput";
             this.sunriseOutput.Size = new System.Drawing.Size(127, 21);
@@ -242,7 +247,7 @@
             // 
             this.sunsetLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunsetLabel.ForeColor = System.Drawing.Color.White;
-            this.sunsetLabel.Location = new System.Drawing.Point(452, 313);
+            this.sunsetLabel.Location = new System.Drawing.Point(473, 398);
             this.sunsetLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sunsetLabel.Name = "sunsetLabel";
             this.sunsetLabel.Size = new System.Drawing.Size(63, 21);
@@ -254,7 +259,7 @@
             // 
             this.sunsetOutput.BackColor = System.Drawing.Color.Transparent;
             this.sunsetOutput.ForeColor = System.Drawing.Color.White;
-            this.sunsetOutput.Location = new System.Drawing.Point(424, 334);
+            this.sunsetOutput.Location = new System.Drawing.Point(427, 377);
             this.sunsetOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sunsetOutput.Name = "sunsetOutput";
             this.sunsetOutput.Size = new System.Drawing.Size(124, 21);
@@ -279,7 +284,7 @@
             // 
             this.humidityLabel.BackColor = System.Drawing.Color.Transparent;
             this.humidityLabel.ForeColor = System.Drawing.Color.White;
-            this.humidityLabel.Location = new System.Drawing.Point(433, 408);
+            this.humidityLabel.Location = new System.Drawing.Point(406, 445);
             this.humidityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.humidityLabel.Name = "humidityLabel";
             this.humidityLabel.Size = new System.Drawing.Size(82, 21);
@@ -361,11 +366,55 @@
             this.label1.Text = "♡";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lastUpdatedLabel
+            // 
+            this.lastUpdatedLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lastUpdatedLabel.ForeColor = System.Drawing.Color.White;
+            this.lastUpdatedLabel.Location = new System.Drawing.Point(230, 637);
+            this.lastUpdatedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastUpdatedLabel.Name = "lastUpdatedLabel";
+            this.lastUpdatedLabel.Size = new System.Drawing.Size(179, 21);
+            this.lastUpdatedLabel.TabIndex = 92;
+            this.lastUpdatedLabel.Text = "Last Updated:";
+            this.lastUpdatedLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lastUpdatedOutput
+            // 
+            this.lastUpdatedOutput.BackColor = System.Drawing.Color.Transparent;
+            this.lastUpdatedOutput.ForeColor = System.Drawing.Color.White;
+            this.lastUpdatedOutput.Location = new System.Drawing.Point(369, 637);
+            this.lastUpdatedOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lastUpdatedOutput.Name = "lastUpdatedOutput";
+            this.lastUpdatedOutput.Size = new System.Drawing.Size(179, 21);
+            this.lastUpdatedOutput.TabIndex = 93;
+            this.lastUpdatedOutput.Text = "LastUpdatedDate/Time";
+            this.lastUpdatedOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // conditionOutput
+            // 
+            this.conditionOutput.BackColor = System.Drawing.Color.Transparent;
+            this.conditionOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.conditionOutput.ForeColor = System.Drawing.Color.White;
+            this.conditionOutput.Location = new System.Drawing.Point(65, 308);
+            this.conditionOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.conditionOutput.Name = "conditionOutput";
+            this.conditionOutput.Size = new System.Drawing.Size(415, 26);
+            this.conditionOutput.TabIndex = 94;
+            this.conditionOutput.Text = "Condition";
+            this.conditionOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // refreshTimer
+            // 
+            this.refreshTimer.Tick += new System.EventHandler(this.refreshTimer_Tick);
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.conditionOutput);
+            this.Controls.Add(this.lastUpdatedOutput);
+            this.Controls.Add(this.lastUpdatedLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.feelsLikeTempOutput);
             this.Controls.Add(this.feelsLikeTempLabel);
@@ -425,5 +474,9 @@
         private System.Windows.Forms.Label feelsLikeTempLabel;
         private System.Windows.Forms.Label feelsLikeTempOutput;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lastUpdatedLabel;
+        private System.Windows.Forms.Label lastUpdatedOutput;
+        private System.Windows.Forms.Label conditionOutput;
+        private System.Windows.Forms.Timer refreshTimer;
     }
 }

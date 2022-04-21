@@ -10,7 +10,14 @@ using System.Windows.Forms;
 namespace XMLWeather
 {
     public partial class CurrentScreen : UserControl
-    {
+    { 
+        //refresh timer counter
+        int timerCounter = 0;
+        //date and time of computer
+        int currentSec = DateTime.Now.Second;
+        int currentMin = DateTime.Now.Minute;
+        int currentHour = DateTime.Now.Hour;
+
         public CurrentScreen()
         {
             InitializeComponent();
@@ -22,7 +29,7 @@ namespace XMLWeather
             //set text outputs
             setText();
 
-            //change bg day/night, night from 8pm-6am
+            //change bg day/night, night from 7pm-6am
             Form1.timeBGImage(this);
         }
         public void setText()
@@ -39,6 +46,10 @@ namespace XMLWeather
             visibilityOutput.Text = Form1.days[0].visibility + " M";
             feelsLikeTempOutput.Text = Form1.days[0].feelsLikeTemp + "°C";
 
+            //format condition 
+           // string temp = Form1.days[0].condition;
+            //char c = temp.Substring(0, 1).ToUpper();
+            conditionOutput.Text = Form1.days[0].condition;
 
             ////get sunrise and sunset, convert to timezone and display
             //DateTime sunriseTime = Convert.ToDateTime(Form1.days[0].sunrise);
@@ -55,18 +66,21 @@ namespace XMLWeather
             //{
             //    chanceOfLabel.Text = "Chance of Precipitation";
             //}
-            //display percent chance
-            chanceOutput.Text = (Convert.ToDouble(Form1.days[0].precipProb) * 100).ToString() + " %";
+            ////display percent chance
+            //chanceOutput.Text = (Convert.ToDouble(Form1.days[0].precipProb) * 100).ToString() + " %";
 
             //display precip amount if any, else 0
-            if (Form1.days[0].precipAmount != null)
-            {
-                precipitationOutput.Text = (Convert.ToDouble(Form1.days[0].precipAmount) * 100).ToString() + " cm";
-            }
+            //if (Form1.days[0].precipAmount != null)
+            //{
+            //    precipitationOutput.Text = (Convert.ToDouble(Form1.days[0].precipAmount) * 100).ToString() + " cm";
+            //}
             //else
             //{
             //    precipitationOutput.Text = "0 cm";
             //}
+
+            //get last updated time, convert to timezone and display
+            lastUpdatedOutput.Text = DateTime.Now.ToString("dd-MM-yy    hh:mm tt");
 
         }
 
@@ -77,6 +91,22 @@ namespace XMLWeather
 
             ForecastScreen fs = new ForecastScreen();
             f.Controls.Add(fs);
+        }
+
+        private void refreshTimer_Tick(object sender, EventArgs e)
+        {
+            //increase timer
+            timerCounter++;
+
+            //if 10 mins have passed, refresh data
+            if (timerCounter == 6000)
+            {
+                Form1.days.Clear();
+                Form1.ExtractForecast();
+                Form1.ExtractCurrent();
+
+                timerCounter = 0;
+            }
         }
     }
 }
