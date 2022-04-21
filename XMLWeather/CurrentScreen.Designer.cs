@@ -48,6 +48,11 @@
             this.dateOutput = new System.Windows.Forms.Label();
             this.humidityLabel = new System.Windows.Forms.Label();
             this.humidityOutput = new System.Windows.Forms.Label();
+            this.visibilityLabel = new System.Windows.Forms.Label();
+            this.visibilityOutput = new System.Windows.Forms.Label();
+            this.feelsLikeTempLabel = new System.Windows.Forms.Label();
+            this.feelsLikeTempOutput = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cityOutput
@@ -100,6 +105,7 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(202, 37);
@@ -128,7 +134,7 @@
             this.hlLabel.AutoSize = true;
             this.hlLabel.BackColor = System.Drawing.Color.Transparent;
             this.hlLabel.ForeColor = System.Drawing.Color.White;
-            this.hlLabel.Location = new System.Drawing.Point(205, 229);
+            this.hlLabel.Location = new System.Drawing.Point(205, 283);
             this.hlLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hlLabel.Name = "hlLabel";
             this.hlLabel.Size = new System.Drawing.Size(110, 20);
@@ -140,7 +146,7 @@
             this.highOutput.AutoSize = true;
             this.highOutput.BackColor = System.Drawing.Color.Transparent;
             this.highOutput.ForeColor = System.Drawing.Color.White;
-            this.highOutput.Location = new System.Drawing.Point(230, 229);
+            this.highOutput.Location = new System.Drawing.Point(230, 283);
             this.highOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.highOutput.Name = "highOutput";
             this.highOutput.Size = new System.Drawing.Size(39, 20);
@@ -152,7 +158,7 @@
             this.lowOutput.AutoSize = true;
             this.lowOutput.BackColor = System.Drawing.Color.Transparent;
             this.lowOutput.ForeColor = System.Drawing.Color.White;
-            this.lowOutput.Location = new System.Drawing.Point(310, 229);
+            this.lowOutput.Location = new System.Drawing.Point(310, 283);
             this.lowOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lowOutput.Name = "lowOutput";
             this.lowOutput.Size = new System.Drawing.Size(32, 20);
@@ -293,11 +299,78 @@
             this.humidityOutput.Text = "HumidityPercent";
             this.humidityOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // visibilityLabel
+            // 
+            this.visibilityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.visibilityLabel.ForeColor = System.Drawing.Color.White;
+            this.visibilityLabel.Location = new System.Drawing.Point(433, 502);
+            this.visibilityLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.visibilityLabel.Name = "visibilityLabel";
+            this.visibilityLabel.Size = new System.Drawing.Size(86, 21);
+            this.visibilityLabel.TabIndex = 86;
+            this.visibilityLabel.Text = "Visibility";
+            this.visibilityLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // visibilityOutput
+            // 
+            this.visibilityOutput.BackColor = System.Drawing.Color.Transparent;
+            this.visibilityOutput.ForeColor = System.Drawing.Color.White;
+            this.visibilityOutput.Location = new System.Drawing.Point(397, 523);
+            this.visibilityOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.visibilityOutput.Name = "visibilityOutput";
+            this.visibilityOutput.Size = new System.Drawing.Size(151, 21);
+            this.visibilityOutput.TabIndex = 87;
+            this.visibilityOutput.Text = "VisibilityMeasure";
+            this.visibilityOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // feelsLikeTempLabel
+            // 
+            this.feelsLikeTempLabel.BackColor = System.Drawing.Color.Transparent;
+            this.feelsLikeTempLabel.ForeColor = System.Drawing.Color.White;
+            this.feelsLikeTempLabel.Location = new System.Drawing.Point(174, 250);
+            this.feelsLikeTempLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.feelsLikeTempLabel.Name = "feelsLikeTempLabel";
+            this.feelsLikeTempLabel.Size = new System.Drawing.Size(156, 21);
+            this.feelsLikeTempLabel.TabIndex = 89;
+            this.feelsLikeTempLabel.Text = "Feels Like:";
+            this.feelsLikeTempLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // feelsLikeTempOutput
+            // 
+            this.feelsLikeTempOutput.BackColor = System.Drawing.Color.Transparent;
+            this.feelsLikeTempOutput.ForeColor = System.Drawing.Color.White;
+            this.feelsLikeTempOutput.Location = new System.Drawing.Point(297, 250);
+            this.feelsLikeTempOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.feelsLikeTempOutput.Name = "feelsLikeTempOutput";
+            this.feelsLikeTempOutput.Size = new System.Drawing.Size(45, 21);
+            this.feelsLikeTempOutput.TabIndex = 90;
+            this.feelsLikeTempOutput.Text = "FeelsLikeTemp";
+            this.feelsLikeTempOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Location = new System.Drawing.Point(171, 209);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(214, 30);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "♡";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.feelsLikeTempOutput);
+            this.Controls.Add(this.feelsLikeTempLabel);
+            this.Controls.Add(this.visibilityOutput);
+            this.Controls.Add(this.visibilityLabel);
             this.Controls.Add(this.humidityOutput);
             this.Controls.Add(this.humidityLabel);
             this.Controls.Add(this.dateOutput);
@@ -347,5 +420,10 @@
         private System.Windows.Forms.Label dateOutput;
         private System.Windows.Forms.Label humidityLabel;
         private System.Windows.Forms.Label humidityOutput;
+        private System.Windows.Forms.Label visibilityLabel;
+        private System.Windows.Forms.Label visibilityOutput;
+        private System.Windows.Forms.Label feelsLikeTempLabel;
+        private System.Windows.Forms.Label feelsLikeTempOutput;
+        private System.Windows.Forms.Label label1;
     }
 }

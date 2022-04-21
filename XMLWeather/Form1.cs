@@ -73,12 +73,16 @@ namespace XMLWeather
             //get temp and round
             reader.ReadToFollowing("temperature");
             days[0].currentTemp = Convert.ToDouble(reader.GetAttribute("value")).ToString("0");
+            reader.ReadToFollowing("feels_like");
+            days[0].feelsLikeTemp = Convert.ToDouble(reader.GetAttribute("value")).ToString("0");
 
             //get humidity
             reader.ReadToFollowing("humidity");
             days[0].humidity = reader.GetAttribute("value");
 
-            //
+            //get visibility index, convert to km
+            reader.ReadToFollowing("visibility");
+            days[0].visibility = reader.GetAttribute("value");
 
 
             ////get sunrise and sunsest ///ask why it is crashing///
@@ -91,6 +95,18 @@ namespace XMLWeather
 
         }
 
-
+        //change the bachground based on what time it is
+        public static void timeBGImage(UserControl control)
+        {
+            //change bg image, night from 7pm to 6am
+            if (DateTime.Now.Hour > 19 || DateTime.Now.Hour < 6)
+            {
+                control.BackgroundImage = Properties.Resources.nightBG;
+            }
+            else
+            {
+                control.BackgroundImage = Properties.Resources.morningBG;
+            }
+        }
     }
 }
