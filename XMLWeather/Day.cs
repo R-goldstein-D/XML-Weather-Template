@@ -11,13 +11,13 @@ namespace XMLWeather
         //variables
         public string date, currentTemp, feelsLikeTemp, condition, location, country, tempHigh, tempLow,
             windSpeed, windDirection, visibility, sunrise, sunset, symbol, precipProb, precipType, precipAmount, humidity,
-            lastUpdated;
+            lastUpdated, pressure;
 
         public Day()
         {
             date = currentTemp = feelsLikeTemp = condition = location = country = tempHigh = tempLow =
             windSpeed = windDirection = visibility = sunrise = sunset = symbol = precipProb = precipType = precipAmount = humidity =
-            lastUpdated = "";
+            lastUpdated = pressure = "";
         }
     }
 }

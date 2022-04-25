@@ -10,7 +10,11 @@ using System.Windows.Forms;
 namespace XMLWeather
 {
     public partial class CurrentScreen : UserControl
-    { 
+    {
+
+        // Creates a TextInfo based on the "en-US" culture.
+       // TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+
         //refresh timer counter
         int timerCounter = 0;
         //date and time of computer
@@ -41,13 +45,15 @@ namespace XMLWeather
             lowOutput.Text = Form1.days[0].tempLow + "°C";
             highOutput.Text = Form1.days[0].tempHigh + "°C";
 
-            //humidity,visiblilty, feels like
+            //humidity,visiblilty, feels like, wind, pressure
             humidityOutput.Text = Form1.days[0].humidity + " %";
-            visibilityOutput.Text = Form1.days[0].visibility + " M";
+            visibilityOutput.Text = Form1.days[0].visibility + " KM";
             feelsLikeTempOutput.Text = Form1.days[0].feelsLikeTemp + "°C";
+            windOutput.Text = Form1.days[0].windDirection + " " + Form1.days[0].windSpeed + " km/hr";
+            pressureOutput.Text = Form1.days[0].pressure + " hPa";
 
             //format condition 
-           // string temp = Form1.days[0].condition;
+            // string temp = Form1.days[0].condition;
             //char c = temp.Substring(0, 1).ToUpper();
             conditionOutput.Text = Form1.days[0].condition;
 
@@ -58,26 +64,26 @@ namespace XMLWeather
             //sunsetOutput.Text = sunsetTime.ToString("hh:mm tt");
 
             //if type not null, display type of precip, else just precip
-            //if (Form1.days[0].precipType != null)
-            //{
-            //    chanceOfLabel.Text = "Chance of " + (Form1.days[0].precipType);
-            //}
-            //else
-            //{
-            //    chanceOfLabel.Text = "Chance of Precipitation";
-            //}
-            ////display percent chance
-            //chanceOutput.Text = (Convert.ToDouble(Form1.days[0].precipProb) * 100).ToString() + " %";
+            if (Form1.days[0].precipType != null)
+            {
+                chanceOfLabel.Text = "Chance of " + (Form1.days[0].precipType);
+            }
+            else
+            {
+                chanceOfLabel.Text = "Chance of Precipitation";
+            }
+            //display percent chance
+            chanceOutput.Text = (Convert.ToDouble(Form1.days[0].precipProb) * 100).ToString() + " %";
 
             //display precip amount if any, else 0
-            //if (Form1.days[0].precipAmount != null)
-            //{
-            //    precipitationOutput.Text = (Convert.ToDouble(Form1.days[0].precipAmount) * 100).ToString() + " cm";
-            //}
-            //else
-            //{
-            //    precipitationOutput.Text = "0 cm";
-            //}
+            if (Form1.days[0].precipAmount != null)
+            {
+                precipitationOutput.Text = (Convert.ToDouble(Form1.days[0].precipAmount) * 100).ToString() + " cm";
+            }
+            else
+            {
+                precipitationOutput.Text = "0 cm";
+            }
 
             //get last updated time, convert to timezone and display
             lastUpdatedOutput.Text = DateTime.Now.ToString("dd-MM-yy    hh:mm tt");

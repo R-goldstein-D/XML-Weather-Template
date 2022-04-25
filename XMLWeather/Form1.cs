@@ -16,7 +16,9 @@ namespace XMLWeather
         // TODO: create list to hold day objects
         public static List<Day> days = new List<Day>();
 
-        String symbol = "°";
+        //variable to hold city
+        public static string location = "Stratford,CA";
+
         public Form1()
         {
             InitializeComponent();
@@ -42,16 +44,21 @@ namespace XMLWeather
                 reader.ReadToFollowing("time");
                 newDay.date = reader.GetAttribute("day");
 
-                //get low and high and remove decimals
-                reader.ReadToFollowing("temperature");
-                newDay.tempLow = Convert.ToDouble(reader.GetAttribute("min")).ToString("0");
-                newDay.tempHigh = Convert.ToDouble(reader.GetAttribute("max")).ToString("0");
+                //get weather symbol number
+                reader.ReadToFollowing("symbol");
+                newDay.symbol = reader.GetAttribute("number");
 
                 //get precipitation probability, amount, and type
                 reader.ReadToFollowing("precipitation");
                 newDay.precipProb = reader.GetAttribute("probability");
                 newDay.precipAmount = reader.GetAttribute("value");
                 newDay.precipType = reader.GetAttribute("type");
+
+                //get low and high and remove decimals
+                reader.ReadToFollowing("temperature");
+                newDay.tempLow = Convert.ToDouble(reader.GetAttribute("min")).ToString("0");
+                newDay.tempHigh = Convert.ToDouble(reader.GetAttribute("max")).ToString("0");
+
 
                 //if day object not null add to the days list
                 if (newDay.date != null)
@@ -80,17 +87,25 @@ namespace XMLWeather
             reader.ReadToFollowing("humidity");
             days[0].humidity = reader.GetAttribute("value");
 
+            //pressure
+            reader.ReadToFollowing("pressure");
+            days[0].pressure = reader.GetAttribute("value");
+
+            //get wind speed and convert m/s to km/h
+            reader.ReadToFollowing("speed");
+            days[0].windSpeed = (Convert.ToDouble(reader.GetAttribute("value")) * 3.6).ToString("0");
+
+            //get wind direction
+            reader.ReadToFollowing("direction");
+            days[0].windDirection = reader.GetAttribute("code");
+
             //get visibility index, convert to km
             reader.ReadToFollowing("visibility");
-            days[0].visibility = reader.GetAttribute("value");
+            days[0].visibility = (Convert.ToDouble(reader.GetAttribute("value")) / 1000).ToString("0");
 
             //get weather condition
             reader.ReadToFollowing("weather");
             days[0].condition = reader.GetAttribute("value");
-
-            ////get last updated
-            //reader.ReadToFollowing("lastupdate");
-            //days[0].lastUpdated = reader.GetAttribute("value");
 
             ////get sunrise and sunsest ///ask why it is crashing///
             //reader.ReadToFollowing("sun");
