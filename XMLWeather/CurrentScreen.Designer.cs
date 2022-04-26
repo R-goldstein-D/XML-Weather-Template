@@ -170,7 +170,7 @@
             this.lowOutput.AutoSize = true;
             this.lowOutput.BackColor = System.Drawing.Color.Transparent;
             this.lowOutput.ForeColor = System.Drawing.Color.White;
-            this.lowOutput.Location = new System.Drawing.Point(310, 283);
+            this.lowOutput.Location = new System.Drawing.Point(323, 283);
             this.lowOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lowOutput.Name = "lowOutput";
             this.lowOutput.Size = new System.Drawing.Size(32, 20);
