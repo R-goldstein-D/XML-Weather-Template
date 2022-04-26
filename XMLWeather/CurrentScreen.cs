@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
 
 namespace XMLWeather
 {
@@ -30,6 +31,9 @@ namespace XMLWeather
 
         public void DisplayCurrent()
         {
+            //play sound 
+            Form1.nextScreen.Play();
+
             //set text outputs
             setText();
 
@@ -53,9 +57,9 @@ namespace XMLWeather
             windOutput.Text = Form1.days[0].windDirection + " " + Form1.days[0].windSpeed + " km/hr";
             pressureOutput.Text = Form1.days[0].pressure + " hPa";
 
-            //format condition 
-             //string temp = Form1.days[0].condition;
-            //char c = temp.Substring(0, 1).ToUpper();
+            ////format condition 
+            // string temp = Form1.days[0].condition;
+            // char c = temp.Substring(0, 1).ToUpper();
             conditionOutput.Text = Form1.days[0].condition;
 
             //if type not null, display type of precip, else just precip

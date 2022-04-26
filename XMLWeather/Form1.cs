@@ -8,16 +8,20 @@ using System.Text;
 using System.Windows.Forms;
 using System.Net;
 using System.Xml;
+using System.Media;
 
 namespace XMLWeather
 {
     public partial class Form1 : Form
     {
-        // TODO: create list to hold day objects
+        //create list to hold day objects
         public static List<Day> days = new List<Day>();
 
         //variable to hold city
         public static string location = "Stratford,CA";
+
+        //sound when starting up
+        public static SoundPlayer nextScreen = new SoundPlayer(Properties.Resources.startingUP);
 
         public Form1()
         {

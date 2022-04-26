@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace XMLWeather
 {
@@ -21,6 +22,9 @@ namespace XMLWeather
         /// Sets up visual aspects on screen
         private void VisualsSetup()
         {
+            //play sound 
+            Form1.nextScreen.Play();
+
             //set instruction text in text box
             locationInput.Text = "Search, ie. Stratford,CA";
 

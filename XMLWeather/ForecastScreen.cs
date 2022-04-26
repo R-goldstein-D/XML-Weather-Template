@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Media;
 
 namespace XMLWeather
 {
@@ -22,6 +23,9 @@ namespace XMLWeather
 
         public void displayForecast()
         {
+            //play sound 
+            Form1.nextScreen.Play();
+
             //add picture boxes to list
             iconBoxes = new List<PictureBox>() {date1Icon, date2Icon, date3Icon, date4Icon, date5Icon, date6Icon};
 
