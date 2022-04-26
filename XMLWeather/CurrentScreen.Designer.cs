@@ -62,6 +62,9 @@
             this.windOutput = new System.Windows.Forms.Label();
             this.pressureOutput = new System.Windows.Forms.Label();
             this.pressureLabel = new System.Windows.Forms.Label();
+            this.pictureBoxBG = new System.Windows.Forms.PictureBox();
+            this.searchLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             this.SuspendLayout();
             // 
             // cityOutput
@@ -69,10 +72,10 @@
             this.cityOutput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cityOutput.BackColor = System.Drawing.Color.Transparent;
             this.cityOutput.ForeColor = System.Drawing.Color.White;
-            this.cityOutput.Location = new System.Drawing.Point(221, 78);
+            this.cityOutput.Location = new System.Drawing.Point(171, 78);
             this.cityOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cityOutput.Name = "cityOutput";
-            this.cityOutput.Size = new System.Drawing.Size(106, 35);
+            this.cityOutput.Size = new System.Drawing.Size(214, 35);
             this.cityOutput.TabIndex = 22;
             this.cityOutput.Text = "City";
             this.cityOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -399,7 +402,7 @@
             this.conditionOutput.BackColor = System.Drawing.Color.Transparent;
             this.conditionOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conditionOutput.ForeColor = System.Drawing.Color.White;
-            this.conditionOutput.Location = new System.Drawing.Point(65, 308);
+            this.conditionOutput.Location = new System.Drawing.Point(71, 303);
             this.conditionOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.conditionOutput.Name = "conditionOutput";
             this.conditionOutput.Size = new System.Drawing.Size(415, 26);
@@ -459,11 +462,33 @@
             this.pressureLabel.Text = "Pressure";
             this.pressureLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pictureBoxBG
+            // 
+            this.pictureBoxBG.Location = new System.Drawing.Point(0, 3);
+            this.pictureBoxBG.Name = "pictureBoxBG";
+            this.pictureBoxBG.Size = new System.Drawing.Size(563, 694);
+            this.pictureBoxBG.TabIndex = 99;
+            this.pictureBoxBG.TabStop = false;
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.Location = new System.Drawing.Point(10, 25);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(115, 46);
+            this.searchLabel.TabIndex = 100;
+            this.searchLabel.Text = "Search";
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.pressureLabel);
             this.Controls.Add(this.pressureOutput);
             this.Controls.Add(this.windOutput);
@@ -496,9 +521,11 @@
             this.Controls.Add(this.cityOutput);
             this.Controls.Add(this.currentOutput);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBoxBG);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CurrentScreen";
             this.Size = new System.Drawing.Size(563, 700);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,5 +565,7 @@
         private System.Windows.Forms.Label windOutput;
         private System.Windows.Forms.Label pressureOutput;
         private System.Windows.Forms.Label pressureLabel;
+        private System.Windows.Forms.PictureBox pictureBoxBG;
+        private System.Windows.Forms.Label searchLabel;
     }
 }

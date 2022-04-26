@@ -43,12 +43,17 @@
             this.date4Icon = new System.Windows.Forms.PictureBox();
             this.date5Icon = new System.Windows.Forms.PictureBox();
             this.date6Icon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBG = new System.Windows.Forms.PictureBox();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.lowLabel = new System.Windows.Forms.Label();
+            this.highLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.date1Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date2Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date3Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date4Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date5Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date6Icon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).BeginInit();
             this.SuspendLayout();
             // 
             // forecastLabel
@@ -93,12 +98,12 @@
             // 
             this.nextDayDateOutput.AutoSize = true;
             this.nextDayDateOutput.BackColor = System.Drawing.Color.Transparent;
-            this.nextDayDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextDayDateOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextDayDateOutput.ForeColor = System.Drawing.Color.White;
             this.nextDayDateOutput.Location = new System.Drawing.Point(47, 180);
             this.nextDayDateOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nextDayDateOutput.Name = "nextDayDateOutput";
-            this.nextDayDateOutput.Size = new System.Drawing.Size(53, 25);
+            this.nextDayDateOutput.Size = new System.Drawing.Size(63, 29);
             this.nextDayDateOutput.TabIndex = 75;
             this.nextDayDateOutput.Text = "Date";
             // 
@@ -106,12 +111,12 @@
             // 
             this.nextDayMaxOutput.AutoSize = true;
             this.nextDayMaxOutput.BackColor = System.Drawing.Color.Transparent;
-            this.nextDayMaxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextDayMaxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextDayMaxOutput.ForeColor = System.Drawing.Color.White;
-            this.nextDayMaxOutput.Location = new System.Drawing.Point(381, 180);
+            this.nextDayMaxOutput.Location = new System.Drawing.Point(382, 180);
             this.nextDayMaxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nextDayMaxOutput.Name = "nextDayMaxOutput";
-            this.nextDayMaxOutput.Size = new System.Drawing.Size(50, 25);
+            this.nextDayMaxOutput.Size = new System.Drawing.Size(57, 29);
             this.nextDayMaxOutput.TabIndex = 76;
             this.nextDayMaxOutput.Text = "Max";
             this.nextDayMaxOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -120,12 +125,12 @@
             // 
             this.nextDayMinOutput.AutoSize = true;
             this.nextDayMinOutput.BackColor = System.Drawing.Color.Transparent;
-            this.nextDayMinOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nextDayMinOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextDayMinOutput.ForeColor = System.Drawing.Color.White;
             this.nextDayMinOutput.Location = new System.Drawing.Point(257, 180);
             this.nextDayMinOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nextDayMinOutput.Name = "nextDayMinOutput";
-            this.nextDayMinOutput.Size = new System.Drawing.Size(44, 25);
+            this.nextDayMinOutput.Size = new System.Drawing.Size(52, 29);
             this.nextDayMinOutput.TabIndex = 77;
             this.nextDayMinOutput.Text = "Min";
             this.nextDayMinOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -134,11 +139,12 @@
             // 
             this.date.AutoSize = true;
             this.date.BackColor = System.Drawing.Color.Transparent;
+            this.date.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date.ForeColor = System.Drawing.Color.White;
             this.date.Location = new System.Drawing.Point(48, 256);
             this.date.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(44, 20);
+            this.date.Size = new System.Drawing.Size(53, 25);
             this.date.TabIndex = 78;
             this.date.Text = "Date";
             // 
@@ -146,11 +152,12 @@
             // 
             this.maxOutput.AutoSize = true;
             this.maxOutput.BackColor = System.Drawing.Color.Transparent;
+            this.maxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxOutput.ForeColor = System.Drawing.Color.White;
             this.maxOutput.Location = new System.Drawing.Point(382, 256);
             this.maxOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.maxOutput.Name = "maxOutput";
-            this.maxOutput.Size = new System.Drawing.Size(38, 20);
+            this.maxOutput.Size = new System.Drawing.Size(50, 25);
             this.maxOutput.TabIndex = 79;
             this.maxOutput.Text = "Max";
             this.maxOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -159,11 +166,12 @@
             // 
             this.minOutput.AutoSize = true;
             this.minOutput.BackColor = System.Drawing.Color.Transparent;
+            this.minOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minOutput.ForeColor = System.Drawing.Color.White;
             this.minOutput.Location = new System.Drawing.Point(258, 256);
             this.minOutput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.minOutput.Name = "minOutput";
-            this.minOutput.Size = new System.Drawing.Size(34, 20);
+            this.minOutput.Size = new System.Drawing.Size(44, 25);
             this.minOutput.TabIndex = 80;
             this.minOutput.Text = "Min";
             this.minOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -171,7 +179,7 @@
             // date1Icon
             // 
             this.date1Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date1Icon.Location = new System.Drawing.Point(145, 159);
+            this.date1Icon.Location = new System.Drawing.Point(185, 157);
             this.date1Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date1Icon.Name = "date1Icon";
             this.date1Icon.Size = new System.Drawing.Size(66, 68);
@@ -181,7 +189,7 @@
             // date2Icon
             // 
             this.date2Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date2Icon.Location = new System.Drawing.Point(157, 243);
+            this.date2Icon.Location = new System.Drawing.Point(185, 243);
             this.date2Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date2Icon.Name = "date2Icon";
             this.date2Icon.Size = new System.Drawing.Size(45, 52);
@@ -191,7 +199,7 @@
             // date3Icon
             // 
             this.date3Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date3Icon.Location = new System.Drawing.Point(157, 313);
+            this.date3Icon.Location = new System.Drawing.Point(185, 319);
             this.date3Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date3Icon.Name = "date3Icon";
             this.date3Icon.Size = new System.Drawing.Size(45, 52);
@@ -201,7 +209,7 @@
             // date4Icon
             // 
             this.date4Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date4Icon.Location = new System.Drawing.Point(157, 381);
+            this.date4Icon.Location = new System.Drawing.Point(185, 394);
             this.date4Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date4Icon.Name = "date4Icon";
             this.date4Icon.Size = new System.Drawing.Size(45, 52);
@@ -211,7 +219,7 @@
             // date5Icon
             // 
             this.date5Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date5Icon.Location = new System.Drawing.Point(157, 448);
+            this.date5Icon.Location = new System.Drawing.Point(185, 470);
             this.date5Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date5Icon.Name = "date5Icon";
             this.date5Icon.Size = new System.Drawing.Size(45, 52);
@@ -221,18 +229,70 @@
             // date6Icon
             // 
             this.date6Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date6Icon.Location = new System.Drawing.Point(157, 516);
+            this.date6Icon.Location = new System.Drawing.Point(185, 550);
             this.date6Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date6Icon.Name = "date6Icon";
             this.date6Icon.Size = new System.Drawing.Size(45, 52);
             this.date6Icon.TabIndex = 86;
             this.date6Icon.TabStop = false;
             // 
+            // pictureBoxBG
+            // 
+            this.pictureBoxBG.Location = new System.Drawing.Point(0, 3);
+            this.pictureBoxBG.Name = "pictureBoxBG";
+            this.pictureBoxBG.Size = new System.Drawing.Size(563, 694);
+            this.pictureBoxBG.TabIndex = 100;
+            this.pictureBoxBG.TabStop = false;
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.BackColor = System.Drawing.Color.Transparent;
+            this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLabel.ForeColor = System.Drawing.Color.White;
+            this.searchLabel.Location = new System.Drawing.Point(15, 24);
+            this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(115, 46);
+            this.searchLabel.TabIndex = 101;
+            this.searchLabel.Text = "Search";
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
+            // lowLabel
+            // 
+            this.lowLabel.AutoSize = true;
+            this.lowLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lowLabel.ForeColor = System.Drawing.Color.White;
+            this.lowLabel.Location = new System.Drawing.Point(258, 102);
+            this.lowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lowLabel.Name = "lowLabel";
+            this.lowLabel.Size = new System.Drawing.Size(58, 29);
+            this.lowLabel.TabIndex = 102;
+            this.lowLabel.Text = "Low";
+            this.lowLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // highLabel
+            // 
+            this.highLabel.AutoSize = true;
+            this.highLabel.BackColor = System.Drawing.Color.Transparent;
+            this.highLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highLabel.ForeColor = System.Drawing.Color.White;
+            this.highLabel.Location = new System.Drawing.Point(382, 102);
+            this.highLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.highLabel.Name = "highLabel";
+            this.highLabel.Size = new System.Drawing.Size(63, 29);
+            this.highLabel.TabIndex = 103;
+            this.highLabel.Text = "High";
+            this.highLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // ForecastScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.highLabel);
+            this.Controls.Add(this.lowLabel);
+            this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.date6Icon);
             this.Controls.Add(this.date5Icon);
             this.Controls.Add(this.date4Icon);
@@ -248,6 +308,7 @@
             this.Controls.Add(this.forecastLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBoxBG);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ForecastScreen";
             this.Size = new System.Drawing.Size(563, 700);
@@ -257,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.date4Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date5Icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date6Icon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBG)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +341,9 @@
         private System.Windows.Forms.PictureBox date4Icon;
         private System.Windows.Forms.PictureBox date5Icon;
         private System.Windows.Forms.PictureBox date6Icon;
+        private System.Windows.Forms.PictureBox pictureBoxBG;
+        private System.Windows.Forms.Label searchLabel;
+        private System.Windows.Forms.Label lowLabel;
+        private System.Windows.Forms.Label highLabel;
     }
 }

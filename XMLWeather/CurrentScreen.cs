@@ -34,7 +34,8 @@ namespace XMLWeather
             setText();
 
             //change bg day/night, night from 7pm-6am
-            Form1.timeBGImage(this);
+            Form1.timeBGImage(pictureBoxBG);
+            Form1.ChooseBGImage(this);
         }
         public void setText()
         {
@@ -53,15 +54,9 @@ namespace XMLWeather
             pressureOutput.Text = Form1.days[0].pressure + " hPa";
 
             //format condition 
-            // string temp = Form1.days[0].condition;
+             //string temp = Form1.days[0].condition;
             //char c = temp.Substring(0, 1).ToUpper();
             conditionOutput.Text = Form1.days[0].condition;
-
-            ////get sunrise and sunset, convert to timezone and display
-            //DateTime sunriseTime = Convert.ToDateTime(Form1.days[0].sunrise);
-            //sunriseOutput.Text = sunriseTime.ToString("hh:mm tt");
-            //DateTime sunsetTime = Convert.ToDateTime(Form1.days[0].sunset);
-            //sunsetOutput.Text = sunsetTime.ToString("hh:mm tt");
 
             //if type not null, display type of precip, else just precip
             if (Form1.days[0].precipType != null)
@@ -114,5 +109,18 @@ namespace XMLWeather
                 timerCounter = 0;
             }
         }
+
+        private void searchLabel_Click(object sender, EventArgs e)
+        {
+            //switch to search screen
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            SearchScreen ss = new SearchScreen();
+            f.Controls.Add(ss);
+
+            ss.Focus();
+        }
+
     }
 }

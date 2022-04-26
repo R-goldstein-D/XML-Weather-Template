@@ -47,8 +47,9 @@ namespace XMLWeather
                 SetIcon(symbol, i, 32);
             }
 
-            //change bg day/night, night from 8pm-6am
-            Form1.timeBGImage(this);
+            //change bg day/night, night from 7pm-6am
+            Form1.timeBGImage(pictureBoxBG);
+            Form1.ChooseBGImage(this);
         }
         /// <summary>
         /// Sets icon according to symbol value
@@ -93,6 +94,18 @@ namespace XMLWeather
 
             CurrentScreen cs = new CurrentScreen();
             f.Controls.Add(cs);
+        }
+
+        private void searchLabel_Click(object sender, EventArgs e)
+        {
+            //switch to search screen
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            SearchScreen ss = new SearchScreen();
+            f.Controls.Add(ss);
+
+            ss.Focus();
         }
     }
 }
