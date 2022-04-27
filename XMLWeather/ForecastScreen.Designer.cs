@@ -45,8 +45,6 @@
             this.date6Icon = new System.Windows.Forms.PictureBox();
             this.pictureBoxBG = new System.Windows.Forms.PictureBox();
             this.searchLabel = new System.Windows.Forms.Label();
-            this.lowLabel = new System.Windows.Forms.Label();
-            this.highLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.date1Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date2Icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.date3Icon)).BeginInit();
@@ -179,7 +177,7 @@
             // date1Icon
             // 
             this.date1Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date1Icon.Location = new System.Drawing.Point(185, 157);
+            this.date1Icon.Location = new System.Drawing.Point(461, 157);
             this.date1Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date1Icon.Name = "date1Icon";
             this.date1Icon.Size = new System.Drawing.Size(66, 68);
@@ -189,7 +187,7 @@
             // date2Icon
             // 
             this.date2Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date2Icon.Location = new System.Drawing.Point(185, 243);
+            this.date2Icon.Location = new System.Drawing.Point(478, 243);
             this.date2Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date2Icon.Name = "date2Icon";
             this.date2Icon.Size = new System.Drawing.Size(45, 52);
@@ -199,7 +197,7 @@
             // date3Icon
             // 
             this.date3Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date3Icon.Location = new System.Drawing.Point(185, 319);
+            this.date3Icon.Location = new System.Drawing.Point(477, 319);
             this.date3Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date3Icon.Name = "date3Icon";
             this.date3Icon.Size = new System.Drawing.Size(45, 52);
@@ -209,7 +207,7 @@
             // date4Icon
             // 
             this.date4Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date4Icon.Location = new System.Drawing.Point(185, 394);
+            this.date4Icon.Location = new System.Drawing.Point(477, 394);
             this.date4Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date4Icon.Name = "date4Icon";
             this.date4Icon.Size = new System.Drawing.Size(45, 52);
@@ -219,7 +217,7 @@
             // date5Icon
             // 
             this.date5Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date5Icon.Location = new System.Drawing.Point(185, 470);
+            this.date5Icon.Location = new System.Drawing.Point(477, 470);
             this.date5Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date5Icon.Name = "date5Icon";
             this.date5Icon.Size = new System.Drawing.Size(45, 52);
@@ -229,7 +227,7 @@
             // date6Icon
             // 
             this.date6Icon.BackColor = System.Drawing.Color.Transparent;
-            this.date6Icon.Location = new System.Drawing.Point(185, 550);
+            this.date6Icon.Location = new System.Drawing.Point(477, 550);
             this.date6Icon.Margin = new System.Windows.Forms.Padding(2);
             this.date6Icon.Name = "date6Icon";
             this.date6Icon.Size = new System.Drawing.Size(45, 52);
@@ -257,41 +255,11 @@
             this.searchLabel.Text = "Search";
             this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
             // 
-            // lowLabel
-            // 
-            this.lowLabel.AutoSize = true;
-            this.lowLabel.BackColor = System.Drawing.Color.Transparent;
-            this.lowLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lowLabel.ForeColor = System.Drawing.Color.White;
-            this.lowLabel.Location = new System.Drawing.Point(258, 102);
-            this.lowLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lowLabel.Name = "lowLabel";
-            this.lowLabel.Size = new System.Drawing.Size(58, 29);
-            this.lowLabel.TabIndex = 102;
-            this.lowLabel.Text = "Low";
-            this.lowLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // highLabel
-            // 
-            this.highLabel.AutoSize = true;
-            this.highLabel.BackColor = System.Drawing.Color.Transparent;
-            this.highLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highLabel.ForeColor = System.Drawing.Color.White;
-            this.highLabel.Location = new System.Drawing.Point(382, 102);
-            this.highLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.highLabel.Name = "highLabel";
-            this.highLabel.Size = new System.Drawing.Size(63, 29);
-            this.highLabel.TabIndex = 103;
-            this.highLabel.Text = "High";
-            this.highLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // ForecastScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.highLabel);
-            this.Controls.Add(this.lowLabel);
             this.Controls.Add(this.searchLabel);
             this.Controls.Add(this.date6Icon);
             this.Controls.Add(this.date5Icon);
@@ -343,7 +311,5 @@
         private System.Windows.Forms.PictureBox date6Icon;
         private System.Windows.Forms.PictureBox pictureBoxBG;
         private System.Windows.Forms.Label searchLabel;
-        private System.Windows.Forms.Label lowLabel;
-        private System.Windows.Forms.Label highLabel;
     }
 }

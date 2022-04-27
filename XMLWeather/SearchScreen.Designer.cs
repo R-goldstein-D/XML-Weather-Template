@@ -38,6 +38,7 @@
             this.errorLabel = new System.Windows.Forms.Label();
             this.searchPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.searchPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.searchLabel.BackColor = System.Drawing.Color.Transparent;
             this.searchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchLabel.ForeColor = System.Drawing.Color.White;
-            this.searchLabel.Location = new System.Drawing.Point(126, 288);
+            this.searchLabel.Location = new System.Drawing.Point(136, 288);
             this.searchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.searchLabel.Name = "searchLabel";
             this.searchLabel.Size = new System.Drawing.Size(257, 43);
@@ -165,11 +166,26 @@
             this.label1.Text = "Click \"Search\" to find your city!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.Location = new System.Drawing.Point(262, 55);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 30);
+            this.label6.TabIndex = 108;
+            this.label6.Text = "♡";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // SearchScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.searchPictureBox);
             this.Controls.Add(this.errorLabel);
@@ -201,5 +217,6 @@
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.PictureBox searchPictureBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
     }
 }

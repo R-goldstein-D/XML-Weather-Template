@@ -3489,7 +3489,7 @@
         AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
         cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
         b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
-        AQEBCQIAAAAAAAAAAAAAALDFAwCwxQMAAAEAAQoPAgAAALDFAwACUklGRqjFAwBXQVZFZm10IBAAAAAB
+        AQEBCQIAAAAAAAAAsMUDALDFAwCwxQMAAAEAAQoPAgAAALDFAwACUklGRqjFAwBXQVZFZm10IBAAAAAB
         AAEARKwAAIhYAQACABAAZGF0YaDEAwBAJeBLMlPBE14RHxeyP50YgOR39wAQzSMKAnfnVwRjPSFQkw5j
         CE0AVAPhCKL04R2uLcVEUw9f5Y725Q0YD5bSMMao1poOsAd40NPjbv+gIUoFPdca92wkiEOmFEwRqDFc
         TvVDhvz4+NMBwy4TDATX3fCyGRs+6SCwBNQYPj3bL5PLWMgtDCJXt0Qk+9cC1xBdKU7138mU22X9XQ2F
@@ -7614,9 +7614,6 @@
   </data>
   <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weer-Weather-Sun.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sun_darkcloud_heavygrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Weer-Weather-Sun-darkcloud-heavygrain.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sun_darkcloud_heavyrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weer-Weather-Sun-darkcloud-heavyrain.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
